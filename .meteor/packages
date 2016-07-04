@@ -22,3 +22,5 @@ twbs:bootstrap
 matb33:collection-hooks
 session
 rajit:bootstrap3-datepicker
+tsega:bootstrap3-datetimepicker
+meteorhacks:zones

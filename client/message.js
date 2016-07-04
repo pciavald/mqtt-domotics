@@ -1,5 +1,6 @@
 Template.message.helpers({
 	"getDate": function (object) {
+		//console.log(object);
 		return (new Date(object.createdAt));
 	}
 	/*

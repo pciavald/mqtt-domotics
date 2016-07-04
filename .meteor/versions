@@ -36,6 +36,8 @@ logging@1.0.13_1
 matb33:collection-hooks@0.8.1
 meteor@1.1.15_1
 meteor-base@1.0.4
+meteorhacks:inject-initial@1.0.4
+meteorhacks:zones@1.6.0
 minifier-css@1.1.12_1
 minifier-js@1.1.12_1
 minimongo@1.0.17
@@ -43,6 +45,7 @@ mobile-experience@1.0.4
 mobile-status-bar@1.0.12
 modules@0.6.4
 modules-runtime@0.6.4_1
+momentjs:moment@2.8.4
 mongo@1.1.9_1
 mongo-id@1.0.5
 npm-mongo@1.4.44_1
@@ -65,6 +68,7 @@ standard-minifier-js@1.0.7_1
 templating@1.1.12_1
 templating-tools@1.0.4
 tracker@1.0.14
+tsega:bootstrap3-datetimepicker@4.17.37_1
 twbs:bootstrap@3.3.6
 ui@1.0.11
 underscore@1.0.9

@@ -1,17 +1,35 @@
-Template.header.rendered = function () {
-	$('#date-from').datepicker();
-	$('#date-to').datepicker();
-}
+Template.header.onRendered(function () {
+	this.$('.datetimepicker').datetimepicker();
+})
 
-Template.header.events({
-	"click #topic": function (event) {
+Template.time.events({
+	"click #search-time": function (event) {
 		event.preventDefault();
-		Session.set("filter", $("#topic-name").val());
+		var time = [
+			new Date($("#from").val()),
+			new Date($("#to").val())
+		];
+		Session.set("filter-time", time);
 	},
-	"click #clear": function (event) {
+	"click #clear-time": function (event) {
 		event.preventDefault();
-		Session.set("filter", undefined);
+		$("#from").val("");
+		$("#to").val("");
+		Session.set("filter-time", undefined);
+	}
+});
+
+Template.search.events({
+	"click #search-topic": function (event) {
+		event.preventDefault();
+		var topicName= $("#topic-name").val();
+		if (topicName != "")
+			Session.set("filter-topic", topicName);
+	},
+	"click #clear-topic": function (event) {
+		event.preventDefault();
 		$("#topic-name").val("");
+		Session.set("filter-topic", undefined);
 	}
 });
 

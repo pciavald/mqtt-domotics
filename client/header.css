@@ -2,3 +2,14 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+
+#search {
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+#time {
+	border: 1px dashed #DDDDDD;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
