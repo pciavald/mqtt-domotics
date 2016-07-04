@@ -4,6 +4,7 @@ Template.body.rendered = function() {
 	/*
 	 * https://bootstrap-datepicker.readthedocs.io/en/latest/
 	 */
+	Meteor.subscribe("messages");
 	$('#date-from').datepicker();
 	$('#date-to').datepicker();
 	Session.set("rowNumber", 1)
