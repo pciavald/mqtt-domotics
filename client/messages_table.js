@@ -11,20 +11,18 @@ Template.messages_table.helpers({
 			time:	Session.get("filter-time")
 		};
 		var search = {};
-		var nullDate = new Date(0).getTime();
 		if (filter.topic != undefined)
 			search.topic = filter.topic;
 		if (filter.time != undefined) {
-			if (filter.time[0].getTime() != nullDate
-			 || filter.time[1].getTime() != nullDate) {
+			if (filter.time[0].getTime() != 0
+			 || filter.time[1].getTime() != 0) {
 				search.createdAt = {};
-				if (filter.time[0].getTime() !== nullDate)
+				if (filter.time[0].getTime() != 0)
 					search.createdAt["$gte"] = filter.time[0].getTime();
-				if (filter.time[1].getTime() !== nullDate)
+				if (filter.time[1].getTime() != 0)
 					search.createdAt["$lte"] = filter.time[1].getTime();
 			}
 		}
-		console.log(search);
 		return (Messages.find(search).fetch());
 	}
 });
