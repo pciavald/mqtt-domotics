@@ -27,6 +27,7 @@ Template.body.events({
 	"click #clear": function (event) {
 		event.preventDefault();
 		Session.set("filter", undefined);
+		$("#topic-name").val("");
 	}
 });
 
